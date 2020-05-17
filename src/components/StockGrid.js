@@ -19,7 +19,7 @@ const StockGrid = (props) => {
     useEffect(() => {
         if (props.delStock) {
             console.log(props.newStock);
-            setStockArr(stockArr.filter((stock) => stock.stockSymbol !== props.delStock));
+            setStockArr(stockArr.filter((stock) => stock.stockSymbol !== props.delStock.stockSymbol));
         }
     }, [props.delStock]);
 
@@ -29,14 +29,7 @@ const StockGrid = (props) => {
                 {stockArr.map(stock => {
                     return <Col span={8}>
                         <StockCard
-                            stockSymbol={stock.stockSymbol}
-                            cps={stock.cps}
-                            quantity={stock.quantity}
-                            cpps={stock.cpps}
-                            profit={stock.profit}
-                            currentEquity={stock.currentEquity}
-                            companyName={stock.companyName}
-                            companyLogo={stock.companyLogo}
+                            stock={stock}
                         />
                     </Col>
                 })}

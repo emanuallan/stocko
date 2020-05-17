@@ -13,6 +13,14 @@ const TextGroup = (props) => {
         }
     }, [props.newStock])
 
+    useEffect(() => {
+        if (props.delStock) {
+            setTotalEquity(Number((totalEquity - props.delStock.currentEquity).toFixed(2)));
+            setTotalProfit(Number((totalProfit - props.delStock.profit).toFixed(2)));
+
+        }
+    }, [props.delStock])
+
 
     return (
         <div>
@@ -24,7 +32,8 @@ const TextGroup = (props) => {
 
 const mapStateToProps = (state) => {
     return {
-        newStock: state.stocks.stock
+        newStock: state.stocks.stock,
+        delStock: state.stocks.delStock
     }
 }
 

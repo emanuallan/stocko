@@ -25,7 +25,7 @@ const StockGraph = (props) => {
     useEffect(() => {
         if (props.delStock) {
             console.log(props.newStock);
-            setStockArr(stockArr.filter((stock) => stock.stockSymbol !== props.delStock));
+            setStockArr(stockArr.filter((stock) => stock.stockSymbol !== props.delStock.stockSymbol));
         }
     }, [props.delStock]);
 
