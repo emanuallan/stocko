@@ -15,7 +15,7 @@
 
 ## 🍭 Characteristics
 - Input stock symbol, cost per share (price you bought each share for), and the quantity bought, then you'll get a few statistics about your holdings.
-- Pie chart created with Chart.js (https://www.npmjs.com/package/react-chartjs-2)
+- Doughnut chart created with Chart.js (https://www.npmjs.com/package/react-chartjs-2)
 - Hosted with Netlify (https://www.netlify.com/)
 
 
